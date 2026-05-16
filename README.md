@@ -112,7 +112,10 @@ ax = plt.gca()
 ax.margins(0.10)
 plt.axis("off")
 plt.show()
-
+print("CPTs: Humidity 9AM ->{}".format(probs(df, child='Humidity9amCat')))
+print("CPTs: Humidity 3PM ->{}".format(probs(df, child='Humidity3pmCat', parent1='Humidity9amCat')))
+print("CPTs: Wind Gust Speed ->{}".format(probs(df, child='WindGustSpeedCat')))
+print("CPTs: Rain Tomorrow ->{}".format(probs(df, child='RainTomorrow', parent1='Humidity3pmCat', parent2='WindGustSpeedCat')))
 ```
 
 ## Output:
@@ -120,6 +123,7 @@ plt.show()
 <img width="772" height="561" alt="image" src="https://github.com/user-attachments/assets/9583da9e-e033-43b5-a4e7-ec639db26d33" />
 <img width="715" height="332" alt="image" src="https://github.com/user-attachments/assets/bfa041d2-0007-4f98-869a-895b099fb0b4" />
 <img width="846" height="618" alt="image" src="https://github.com/user-attachments/assets/1a75b53d-feb1-4105-9504-049287df7bef" />
+<img width="1292" height="94" alt="image" src="https://github.com/user-attachments/assets/390f8596-3216-479e-a1b4-81150d6732de" />
 
 
 ## Result:
